@@ -15,8 +15,6 @@ public class GameScene {
     private Position[]whereBadGuysAppear;
     private Random rng;
 
-
-
     public GameScene(int width, int height) {
         elements = new ArrayList<>();
         this.width = width;
@@ -56,7 +54,6 @@ public class GameScene {
                     GameObject b1 = (GameObject) b;
                     if (a1.collideWith(b1)){
                         a1.getHitBy(b1);
-
                     }
                 }
             }

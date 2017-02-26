@@ -36,8 +36,6 @@ public class GameBoard extends JPanel implements ActionListener, KeyListener{
         setFocusable(true);
         setFocusTraversalKeysEnabled(true);
 
-
-
         bullets = new ArrayList<>();
         scene = new GameScene(width, height);
         for(int i=0; i!=numOfBullets; i++){
@@ -100,7 +98,6 @@ public class GameBoard extends JPanel implements ActionListener, KeyListener{
                     jet.moveBack();
                     break;
                 case KeyEvent.VK_F:
-                    System.out.println("fire, fire!");
                     bullets.get(bulletIndex).reanimate(jet.x, jet.y-4);
                     bulletIndex = (bulletIndex+1) % numOfBullets;
                     bullets.get(bulletIndex).reanimate(jet.x+jet.width, jet.y-4);
@@ -112,9 +109,7 @@ public class GameBoard extends JPanel implements ActionListener, KeyListener{
         }
     }
 
-
     public void keyTyped(KeyEvent e) {/* Not used */}
-
 
     public void keyReleased(KeyEvent e) {
         int c = e.getKeyCode();

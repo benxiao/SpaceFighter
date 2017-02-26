@@ -17,9 +17,9 @@ public class Bullet extends GameObject implements SceneObject {
 
     public boolean isInScene(){
         Position center = getCenter();
-        int scene_width = scene.getWidth();
-        int scene_height = scene.getHeight();
-        return center.x>=0 && center.x<= scene_width && center.y>=0 && center.y <=scene_height;
+        int sceneWidth = scene.getWidth();
+        int sceneHeight = scene.getHeight();
+        return (center.x>=0) && (center.x<= sceneWidth) && (center.y>=0) && (center.y<=sceneHeight);
     }
 
     public void draw(Graphics g){
@@ -28,7 +28,7 @@ public class Bullet extends GameObject implements SceneObject {
     }
 
     public void move(){
-        y-= speed;
+        y -= speed;
     }
 
 }
