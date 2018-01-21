@@ -22,9 +22,9 @@ public class GameBoard extends JPanel implements ActionListener, KeyListener{
     private Set<Integer> keysPressed = new HashSet<>();
     private FighterJet jet;
     private List<Bullet> bullets;
-    private final int numOfBullets = 40;
+    private static final int numOfBullets = 40;
     private int bulletIndex = 0;
-    private final int numOfBadGuys = 4;
+    private static final int numOfBadGuys = 4;
 
 
     public GameBoard(int width, int height) {
